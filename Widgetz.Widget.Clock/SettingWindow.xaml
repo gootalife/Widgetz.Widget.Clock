@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Widgetz.Widget.Clock"
         mc:Ignorable="d"
-        Title="SettingWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="個別設定:Clock" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FFEBEBEB" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Canvas Height="300" Width="250">
+        <TextBlock Canvas.Left="10" Canvas.Top="10" TextWrapping="NoWrap"><Run Language="ja-jp" Text="Background Color"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="32" TextWrapping="NoWrap"><Run Language="ja-jp" Text="R"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="55" TextWrapping="NoWrap"><Run Language="ja-jp" Text="G"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="78" TextWrapping="NoWrap"><Run Language="ja-jp" Text="B"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="101" TextWrapping="NoWrap"><Run Language="ja-jp" Text="A"/></TextBlock>
+        <TextBox Name="BGColorR" Canvas.Left="22" Canvas.Top="31" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="BGColorG" Canvas.Left="22" Canvas.Top="54" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="BGColorB" Canvas.Left="22" Canvas.Top="77" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="BGColorA" Canvas.Left="22" Canvas.Top="100" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <Rectangle Name="BGColor" Height="15" Canvas.Left="74" Stroke="Black" Canvas.Top="101" Width="30"/>
+        <TextBlock Canvas.Left="10" Canvas.Top="126" TextWrapping="NoWrap"><Run Language="ja-jp" Text="Fore"/><Run Text="ground Color"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="149" TextWrapping="NoWrap"><Run Language="ja-jp" Text="R"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="171" TextWrapping="NoWrap"><Run Language="ja-jp" Text="G"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="194" TextWrapping="NoWrap"><Run Language="ja-jp" Text="B"/></TextBlock>
+        <TextBlock Canvas.Left="10" Canvas.Top="217" TextWrapping="NoWrap"><Run Language="ja-jp" Text="A"/></TextBlock>
+        <TextBox Name="FGColorR" Canvas.Left="22" Canvas.Top="147" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="FGColorG" Canvas.Left="22" Canvas.Top="170" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="FGColorB" Canvas.Left="22" Canvas.Top="193" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <TextBox Name="FGColorA" Canvas.Left="22" Canvas.Top="216" TextWrapping="NoWrap" Width="35" MaxLength="3" LostFocus="Color_LostFocus" Text="0" TextAlignment="Right"/>
+        <Rectangle Name="FGColor" Height="15" Canvas.Left="75" Stroke="Black" Canvas.Top="217" Width="30"/>
+        <Button Content="閉じる" Canvas.Left="170" Canvas.Top="270" Width="70" Click="CloseButton_Click"/>
+        <Button Content="適用" Canvas.Left="95" Canvas.Top="270" Click="ApplyButton_Click" Width="70"/>
+
+    </Canvas>
 </Window>

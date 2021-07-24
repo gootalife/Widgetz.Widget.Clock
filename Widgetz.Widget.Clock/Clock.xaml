@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Widgetz.Widget.Clock"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Loaded="Clock_Loaded" Background="Black">
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="Clock_Loaded">
     <Grid>
-        <TextBlock Name="TextClock" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="16" FontFamily="MS Gothic" TextAlignment="Left" />
+        <TextBlock Name="ClockTextBlock" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="16" FontFamily="MS Gothic" TextAlignment="Center" />
     </Grid>
 </UserControl>
